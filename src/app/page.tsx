@@ -1,4 +1,3 @@
-import Image from "next/image";
 import MainCities from "@/components/MainCities";
 
 export default function Home() {

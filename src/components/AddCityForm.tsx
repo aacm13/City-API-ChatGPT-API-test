@@ -1,13 +1,14 @@
 "use client";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 
-const AddCityForm = ({ setShowForm, cities, setCities }) => {
+const AddCityForm = ({ setShowForm, cities, setCities }: props) => {
   const [cityName, setCityName] = useState("");
   const [inputErr, setInputErr] = useState("");
   const saveCity = () => {
     // Find the index of an object with a specific property value
     let index = cities.findIndex(
-      (item) => item.name.toLocaleLowerCase() === cityName.toLocaleLowerCase()
+      (item: { name: string }) =>
+        item.name.toLocaleLowerCase() === cityName.toLocaleLowerCase()
     );
     let currentCities = [...cities];
     // Check if the object with the specified property value exists in the array
@@ -58,5 +59,11 @@ const AddCityForm = ({ setShowForm, cities, setCities }) => {
     </>
   );
 };
+
+interface props {
+  setShowForm: any;
+  cities: any;
+  setCities: any;
+}
 
 export default AddCityForm;
