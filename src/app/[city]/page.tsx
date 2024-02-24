@@ -10,7 +10,7 @@ const CityDetails = ({ params }: { params: { city: string } }) => {
       const GPT_API_URL = "https://api.openai.com/v1/chat/completions";
       const ACCU_API_KEY = process.env.NEXT_PUBLIC_ACCUWEATHER_API_KEY;
       const ACCU_API_URL =
-        "http://dataservice.accuweather.com/locations/v1/cities/search";
+        "https://dataservice.accuweather.com/locations/v1/cities/search";
       /* making query to accuweather to get the details of the city */
       const query = `?apikey=${ACCU_API_KEY}&q=${city}`;
       const cityResponse = await fetch(ACCU_API_URL + query);
