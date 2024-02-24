@@ -1,6 +1,6 @@
 ## Getting Started
 
-First clone the code from github: [text](https://github.com/aacm13/City-API-ChatGPT-API-test.git)
+First clone the code from github: [repo](https://github.com/aacm13/City-API-ChatGPT-API-test.git)
 
 next install the dependencies
 
